@@ -1,2 +1,24 @@
 # first_ios_app
-Just my first iOS app (from Apple tutorial)
+My first iOS app. It's based on Apple Swift tutorial. 
+This app is another *FoodTracker* app implementation.
+### This app is coded from [this](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/) tutorial
+
+### Completed lessons
+- Getting started
+	- Jump right in
+- Building the UI
+	- Build a Basic UI
+	- Connect the UI to Code
+	- Work with View Controllers
+
+### To do
+- From *Building the UI*
+	- Implement a Custom Control
+	- Define Your Data Model
+- Everything from *Working with Table Views*
+- Everything from *What's next*
+
+<br></br>
+**Created with ♥**
+
+by Adrian Rupala
