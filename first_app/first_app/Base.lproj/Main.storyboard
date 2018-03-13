@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,50 +16,56 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="first_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="NCv-dM-b5I">
-                                <rect key="frame" x="16" y="40" width="288" height="368.5"/>
+                                <rect key="frame" x="20" y="40" width="252" height="346.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PE-nO-ipP">
-                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PE-nO-ipP">
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-CS-23t">
-                                        <rect key="frame" x="0.0" y="20.5" width="129" height="30"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="252" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts9-Vq-q2K">
-                                        <rect key="frame" x="0.0" y="50.5" width="151" height="30"/>
-                                        <state key="normal" title="Set Default Label Text"/>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13V-dV-KlZ"/>
-                                        </connections>
-                                    </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="3P6-68-WPT">
-                                        <rect key="frame" x="0.0" y="80.5" width="288" height="288"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="252" height="252"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3P6-68-WPT" secondAttribute="height" multiplier="1:1" id="U2O-Yu-ehk"/>
+                                            <constraint firstAttribute="width" secondItem="3P6-68-WPT" secondAttribute="height" multiplier="1:1" id="YPD-vp-tdT"/>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Rts-pa-mwF" appends="YES" id="xAy-La-vph"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uld-TT-FNt" customClass="RatingControl" customModule="first_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="302.5" width="252" height="44"/>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4PE-nO-ipP" secondAttribute="trailing" id="5xt-ik-OB5"/>
+                                    <constraint firstAttribute="trailing" secondItem="J2Q-CS-23t" secondAttribute="trailing" id="KZB-BB-cOL"/>
+                                    <constraint firstItem="uld-TT-FNt" firstAttribute="trailing" secondItem="J2Q-CS-23t" secondAttribute="trailing" id="MLU-ya-P5V"/>
+                                    <constraint firstItem="uld-TT-FNt" firstAttribute="trailing" secondItem="3P6-68-WPT" secondAttribute="trailing" id="l74-W3-ZB1"/>
+                                    <constraint firstItem="4PE-nO-ipP" firstAttribute="leading" secondItem="NCv-dM-b5I" secondAttribute="leading" id="nY9-6H-Fd9"/>
+                                    <constraint firstItem="uld-TT-FNt" firstAttribute="trailing" secondItem="4PE-nO-ipP" secondAttribute="trailing" id="qtN-1n-1ny"/>
+                                    <constraint firstAttribute="trailing" secondItem="3P6-68-WPT" secondAttribute="trailing" id="uTO-IZ-SOZ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="NCv-dM-b5I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Ig-X0-Nle"/>
-                            <constraint firstItem="NCv-dM-b5I" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="H4L-F4-Piz"/>
-                            <constraint firstItem="NCv-dM-b5I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Sfo-tS-Kl3"/>
+                            <constraint firstItem="NCv-dM-b5I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BEM-hl-r0k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NCv-dM-b5I" secondAttribute="trailing" constant="20" id="cPh-D4-tMb"/>
+                            <constraint firstItem="NCv-dM-b5I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="u8a-lH-lkN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -68,6 +73,7 @@
                         <outlet property="mealNameLabel" destination="4PE-nO-ipP" id="3WY-YA-2JE"/>
                         <outlet property="nameTextField" destination="J2Q-CS-23t" id="b18-Kp-QVy"/>
                         <outlet property="photoImageView" destination="3P6-68-WPT" id="Z4d-WQ-U6n"/>
+                        <outlet property="ratingControl" destination="uld-TT-FNt" id="0SY-43-0x0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
