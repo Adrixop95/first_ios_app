@@ -11,10 +11,9 @@ This app is another *FoodTracker* app implementation.
 	- Connect the UI to Code
 	- Work with View Controllers
 	- Implement a Custom Control
+	- Define Your Data Model
 
 ### To do
-- From *Building the UI*
-	- Define Your Data Model
 - Everything from *Working with Table Views*
 - Everything from *What's next*
 
